@@ -137,9 +137,10 @@ a {
     text-transform: none;
 }
 
+/* --- AQUI ESTÁ A CORREÇÃO APLICADA AO SEU CÓDIGO --- */
 .dropdown-menu a:hover {
-    background-color: var(--primary-color);
-    color: #FFFFFF; /* Texto branco no hover do dropdown */
+    background-color: var(--primary-color); /* Fundo laranja */
+    color: #FFFFFF !important;              /* Texto BRANCO (garantido com !important) */
 }
 
 /* --- SEÇÃO HERO --- */
