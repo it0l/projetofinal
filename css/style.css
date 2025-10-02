@@ -1,0 +1,230 @@
+/* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --background-color: #F5F5F7; /* Fundo de gelo / cinza muito claro */
+    --text-color: #1D1D1F;       /* Preto suave para texto */
+    --primary-color: #FF4500;    /* Laranja vibrante mantido como destaque */
+    --card-color: #FFFFFF;       /* Cards em branco puro para se destacarem */
+    --border-color: #DDDDDD;     /* Borda cinza clara e sutil */
+    --font-display: 'Bebas Neue', sans-serif; /* Fonte de impacto para títulos */
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* --- CABEÇALHO (HEADER) --- */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* --- NAVEGAÇÃO E DROPDOWN --- */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin: 0 1.5rem;
+    position: relative; 
+}
+
+.main-nav ul a {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul a:hover {
+    color: var(--primary-color);
+}
+
+.main-nav .fa-chevron-down {
+    font-size: 0.7rem;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    list-style: none;
+    padding: 0.5rem 0;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, top 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra para destacar o menu */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* Texto branco no hover do dropdown */
+}
+
+/* --- SEÇÃO HERO --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF; /* Texto branco sobre a imagem */
+}
+
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #FFFFFF; /* Texto branco no botão */
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* --- SEÇÃO DE DESTAQUES --- */
+.featured-section {
+    padding: 5rem 0;
+}
+
+.featured-section h2 {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--card-color);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color); /* Borda sutil para os cards */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* Sombra mais forte no hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}

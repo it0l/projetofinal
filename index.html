@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF--8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <title> Moda Streetwear</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Marca Roupa</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">STREET</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Destaques</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#">Coleção <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Jaquetas</a></li>
+                            <li><a href="#">Blusas</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Calças</a></li>
+                            <li><a href="#">Acessórios</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" aria-label="Login"><i class="fas fa-user"></i></a>
+                <a href="#" aria-label="Carrinho de Compras"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>ATITUDE É O SEU ESTILO</h1>
+                <p>Lançamentos que definem a cultura das ruas.</p>
+                <a href="#" class="btn-primary">Ver Coleção Completa</a>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <h2>DESTAQUES</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x500/1a1a1a/ffffff?text=Jaqueta+Corta-Vento" alt="Jaqueta Corta-Vento">
+                        <div class="product-info">
+                            <h3>Jaqueta Corta-Vento</h3>
+                            <p>R$ 349,90</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x500/2b2b2b/ffffff?text=Moletom+Gráfico" alt="Moletom Gráfico">
+                        <div class="product-info">
+                            <h3>Moletom Gráfico "Urban"</h3>
+                            <p>R$ 279,90</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x500/212121/ffffff?text=Calça+Cargo" alt="Calça Cargo">
+                        <div class="product-info">
+                            <h3>Calça Cargo Tech</h3>
+                            <p>R$ 399,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
